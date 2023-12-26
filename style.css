@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+.btn-a{
+    border: none;  
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filled{
+    background-color: white;
+    color: black;
+}
+.outline{
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+/* ++++++Navbar+++++++ */
+#navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    /* background-color: transparent; */
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0%;
+    z-index: 999;
+}
+#navbar h4{
+    color: white;
+    font-size: 2rem;
+}
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-items a{
+    color: white;
+}
+
+.image-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image-button:hover {
+    transform: scale(1.1); /* You can adjust the scaling factor as needed */
+}
+
+/* +++++++Landing Section++++++ */
+.landing-section{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 4rem; */
+    background: url("./Images/home-page-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.landing-section::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.615);
+}
+.landing-section .btn-a{
+    display: block;
+    margin-top: 2rem;
+    position: relative;
+}
+.landing-section h1 , .landing-section  h2{
+    position: relative;
+    color: white;
+}
+.landing-section p{
+    position: relative;
+    color: white;
+    max-width: 500px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+.landing-section h1 span{
+    color: red;
+}
+.down-arrow-box{
+    width: 30px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    position: relative;
+    margin-top: 3rem;
+}
+.down-arrow-box .circle{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    animation: circleANimation 4s linear infinite;
+}
+@keyframes circleANimation {
+    0%{
+        top: 80%;
+    }
+    50%{
+        top: 10%;
+    }
+    100%{
+        top: 80%;
+    }
+}
+
+/* +++++HOME PAGE BOTTOM SECTION++++++++ */
+.home-page-bottom-section{
+    background-color: black;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.home-page-bottom-section .features{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+.extra-fetures{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extra-features-left{
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.extra-fetures-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+    /* border: 2px solid white; */
+    padding: 2rem 1rem;
+    width: 250px;
+    color: white;
+    border-radius: 8px;
+    background: linear-gradient( #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 4s ease infinite;
+}
+
+.extra-fetures-card p{
+    font-size: 12px;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.extra-fetures-card img{
+    width: 50px;
+}
+.extra-feaures-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+.extra-feaures-right-bottom{
+    display: flex;
+    gap: 2rem;
+}
+.extra-feaures-right-bottom img{
+    width: 40px;
+}
+
+.about-us{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem 3rem;
+    flex-wrap: wrap;
+}
+.about-us p{
+    font-size: 12px;
+    max-width: 500px;
+    margin-top: 1rem;
+}
+.connect-with-us{
+    margin-top: 2rem;
+}
+.about-us-right img{
+    width: 300px;
+}
+/* ++++++++++++++++++POPUP SCREEN ++++++++++++++++++++++ */
+.popup-screen{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+.form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    height: auto;
+    min-height: 60vh;
+    max-width: 400px;
+    position: relative;
+}
+.input-field{
+    padding: 0.7rem 0.7rem;
+    outline: none;
+}
+.form .btn-a{
+    background-color: red;
+    color: white;
+    width: 150px;
+    text-align: center;
+}
+.login-form-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.login-form-head h2{
+    font-size: 2rem;
+}
+.close-btn{
+    position: absolute;
+    top: -6%;
+    right: -6%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.close-btn img{
+    width: 20px;
+}
+.signup-form-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+}
+.signup-form-head h2{
+    font-size: 2rem;
+}
+
+
+
+/* ++++++++++++FOOTER+++++++++++++++ */
+#footer{
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #00001a;
+    color: white;
+    flex-wrap: wrap;
+}
+.first-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-col{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.second-col a{
+    color: white;
+}
+.third-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.third-col p{
+    max-width: 400px;
+    font-size: 10px;
+}
+
+
+
+@media screen and (max-width:800px) {
+    #footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    #footer .third-col{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .about-us-right img{
+        width: 200px;
+    }
+    .home-page-bottom-section .features{
+        font-size: 10px;
+    }
+    .landing-section h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nav-items a{
+        display: none;
+    }
+    .landing-section p{
+        max-width: 400px;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .landing-section h1{
+       font-size: 2rem;
+    }
+    .landing-section h2{
+        font-size: 1.4rem;
+    }
+    .landing-section p{
+        font-size: 10px;
+        width: auto;
+        max-width: 280px;
+    }
+    #navbar h4{
+        font-size: 1rem;
+    }
+    .home-page-bottom-section .features{
+        font-size: 6px;
+    }
+    #footer .first-col h2{
+        font-size: 2rem;
+    }
+    .about-us h2{
+        font-size: 2rem;
+    }
+    .form{
+        height: auto;
+        min-height: 55vh;
+    }
+    .login-form-head h2{
+        font-size: 1.5rem;
+    }
+    .signup-form h2{
+        font-size: 1.3rem;
+    }
+}
+
+
